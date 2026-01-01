@@ -5,18 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toán 1 - Kết nối tri thức (Tập 2) | Học cùng Bé Rô-bốt</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Ứng dụng học Toán lớp 1 vui nhộn bám sát SGK Kết nối tri thức Tập 2. Giúp bé yêu toán học cùng Bé Rô-bốt!">
-    <meta name="keywords" content="toán lớp 1, kết nối tri thức, học toán online, bé học toán">
-    <meta name="author" content="Senior Frontend Engineer">
-    
-    <!-- OpenGraph (Facebook, Zalo) -->
-    <meta property="og:title" content="🎒 Toán 1 – Kết nối tri thức (Tập 2)">
-    <meta property="og:description" content="Học toán cực vui cùng Bé Rô-bốt! Hoàn thành bài học để nhận sao may mắn.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fonts.gstatic.com/s/i/short-term/release/googlestars/star/default/24px.svg">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -40,8 +28,6 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #5eead4;
         }
-
-        /* Confetti Animation */
         @keyframes confetti {
             0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
             100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
@@ -50,13 +36,10 @@
             position: fixed;
             width: 10px;
             height: 10px;
-            background-color: #ffd700;
             top: -10px;
             z-index: 100;
             animation: confetti 3s linear infinite;
         }
-        
-        /* Shake animation for errors */
         @keyframes shake {
           0%, 100% { transform: translateX(0); }
           25% { transform: translateX(-5px); }
@@ -73,14 +56,15 @@
     "react-dom": "https://esm.sh/react-dom@18.2.0",
     "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body>
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
