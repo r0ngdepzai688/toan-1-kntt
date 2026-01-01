@@ -81,12 +81,17 @@ const App: React.FC = () => {
           <span className="hidden md:inline">Toán 1 – Kết nối tri thức</span>
           <span className="md:hidden">Toán 1</span>
         </h1>
-        <button 
-          onClick={() => setMode(mode === AppMode.KID ? AppMode.TEACHER : AppMode.KID)}
-          className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-1 rounded-full font-bold text-sm hover:bg-white/30 transition-all"
-        >
-          {mode === AppMode.KID ? '👩‍🏫 Giáo viên' : '🧒 Bé học'}
-        </button>
+        <div className="flex items-center gap-4">
+          <span className="hidden lg:block text-xs text-teal-100 font-medium opacity-80">
+            Code by Nguyen Hai Duong_0966635663
+          </span>
+          <button 
+            onClick={() => setMode(mode === AppMode.KID ? AppMode.TEACHER : AppMode.KID)}
+            className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-1 rounded-full font-bold text-sm hover:bg-white/30 transition-all"
+          >
+            {mode === AppMode.KID ? '👩‍🏫 Giáo viên' : '🧒 Bé học'}
+          </button>
+        </div>
       </header>
 
       <div className="flex flex-1 overflow-hidden">
@@ -119,6 +124,12 @@ const App: React.FC = () => {
                 )}
               </button>
             ))}
+          </div>
+          <div className="p-4 border-t border-teal-50 hidden md:block">
+            <p className="text-[10px] text-teal-400 font-bold text-center">
+              © 2025 Nguyen Hai Duong<br/>
+              0966635663
+            </p>
           </div>
         </aside>
 
@@ -269,6 +280,10 @@ const App: React.FC = () => {
           </div>
         </main>
       </div>
+
+      <footer className="bg-white border-t border-teal-50 p-2 text-center md:hidden">
+         <p className="text-[10px] text-teal-400 font-bold">Code by Nguyen Hai Duong_0966635663</p>
+      </footer>
 
       {/* Teacher Mode Overlay */}
       {mode === AppMode.TEACHER && (
