@@ -11,15 +11,24 @@ export enum SectionType {
   LY_THUYET = 'LY_THUYET'
 }
 
+export interface VisualData {
+  type: 'counting' | 'clock' | 'blocks' | 'ruler' | 'comparison';
+  value?: any;
+  items?: string[];
+  count?: number;
+}
+
 export interface TracNghiemQuestion {
   question: string;
   options: string[];
   answer: string;
+  visual?: VisualData;
 }
 
 export interface Statement {
   text: string;
   isCorrect: boolean;
+  visual?: VisualData;
 }
 
 export interface DungSaiQuestion {
@@ -30,6 +39,7 @@ export interface DungSaiQuestion {
 export interface DienSoQuestion {
   question: string;
   answer: string | number;
+  visual?: VisualData;
 }
 
 export interface LessonSections {
