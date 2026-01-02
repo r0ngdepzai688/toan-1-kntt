@@ -12,10 +12,12 @@ export enum SectionType {
 }
 
 export interface VisualData {
-  type: 'counting' | 'clock' | 'blocks' | 'ruler' | 'comparison';
+  type: 'counting' | 'clock' | 'blocks' | 'ruler' | 'comparison' | 'shapes' | 'number_line' | 'sequence';
   value?: any;
   items?: string[];
   count?: number;
+  layout?: 'grid' | 'random' | 'row';
+  color?: string;
 }
 
 export interface TracNghiemQuestion {
